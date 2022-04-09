@@ -1,0 +1,12 @@
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\bin\Release\netcoreapp3.1\glassRUN.Framework.deps.json
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\bin\Release\netcoreapp3.1\glassRUN.Framework.dll
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\bin\Release\netcoreapp3.1\glassRUN.Framework.pdb
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.AssemblyInfoInputs.cache
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.AssemblyInfo.cs
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.csproj.CoreCompileInputs.cache
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.dll
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.pdb
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\bin\Release\netcoreapp3.1\Excel.4.5.dll
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.csproj.CopyComplete
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.csproj.AssemblyReference.cache
+D:\AzureTFS\OrderManagementAPI\glassRUN.Framework\obj\Release\netcoreapp3.1\glassRUN.Framework.GeneratedMSBuildEditorConfig.editorconfig

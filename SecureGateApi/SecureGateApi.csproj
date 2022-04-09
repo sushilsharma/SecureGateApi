@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.15" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureGate.APIController.Framework\SecureGate.APIController.Framework.csproj" />
+    <ProjectReference Include="..\SecureGate.DataAccess.Common\SecureGate.DataAccess.Common.csproj" />
+    <ProjectReference Include="..\SecureGate.Framework\SecureGate.Framework.csproj" />
+    <ProjectReference Include="..\SecureGate.ManageLogin\SecureGate.ManageLogin.csproj" />
+    <ProjectReference Include="..\SecureGate.WebApi.SignalRHub\SecureGate.WebApi.SignalRHub.csproj" />
+  </ItemGroup>
+
+</Project>

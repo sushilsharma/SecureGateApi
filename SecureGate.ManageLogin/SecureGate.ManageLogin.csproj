@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureGate.APIController.Framework\SecureGate.APIController.Framework.csproj" />
+    <ProjectReference Include="..\SecureGate.DataAccess.Common\SecureGate.DataAccess.Common.csproj" />
+    <ProjectReference Include="..\SecureGate.Framework\SecureGate.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Excel.4.5">
+      <HintPath>..\SecureGate.Framework\dlls\Excel.4.5.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\AzureTFS\\OrderManagementAPI\\glassRUN.Framework\\glassRUN.Framework.csproj": {}
+  },
+  "projects": {
+    "D:\\AzureTFS\\OrderManagementAPI\\glassRUN.Framework\\glassRUN.Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\AzureTFS\\OrderManagementAPI\\glassRUN.Framework\\glassRUN.Framework.csproj",
+        "projectName": "glassRUN.Framework",
+        "projectPath": "D:\\AzureTFS\\OrderManagementAPI\\glassRUN.Framework\\glassRUN.Framework.csproj",
+        "packagesPath": "C:\\Users\\Sushil Sharma\\.nuget\\packages\\",
+        "outputPath": "D:\\AzureTFS\\OrderManagementAPI\\glassRUN.Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Sushil Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/blankchq/1fc1e970-70f9-46eb-b495-ea6b03d95832/_packaging/glassRUNFramework-packages/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Caching.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.1.58, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "System.Runtime.Caching": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE GenerateMaintenanceBillForAugust
+﻿CREATE PROCEDURE [dbo].[GenerateMaintenanceBillForAugust]
     @FlatId BIGINT
 AS
 BEGIN
@@ -53,7 +53,7 @@ BEGIN
     FROM ChargeTypes
     WHERE RoomTypeId IS NULL OR RoomTypeId = @RoomTypeId;
 
-    -- Update the TotalPayable in the Bills table
+    -- Update the TotalPayable in the Bills
     UPDATE Bills
     SET TotalPayable = (
         SELECT SUM(Amount) 

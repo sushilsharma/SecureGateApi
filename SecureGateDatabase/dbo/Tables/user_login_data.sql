@@ -10,10 +10,18 @@
     [EmailValidationStatusId] BIGINT         NULL,
     [PasswordRecoveryToken]   NVARCHAR (100) NULL,
     [RecoveryTokenTime]       DATETIME       NULL,
+    [TanentCode]              NVARCHAR (250) NULL,
+    [IsActive]                BIT            NULL,
+    [CreatedDate]             DATETIME       NULL,
+    [CreatedBy]               BIGINT         NULL,
+    [UpdatedDate]             DATETIME       NULL,
+    [UpdatedBy]               BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([UserId] ASC),
     FOREIGN KEY ([EmailValidationStatusId]) REFERENCES [dbo].[email_validation_status] ([EmailValidationStatusId]),
     FOREIGN KEY ([HashAlgorithmId]) REFERENCES [dbo].[hashing_algorithms] ([HashAlgorithmId])
 );
+
+
 
 
 GO

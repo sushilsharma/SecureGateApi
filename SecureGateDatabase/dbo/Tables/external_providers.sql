@@ -2,8 +2,16 @@
     [ExternalProviderId] BIGINT         IDENTITY (1, 1) NOT NULL,
     [ProviderName]       NVARCHAR (50)  NOT NULL,
     [WSEndPoint]         NVARCHAR (200) NULL,
+    [TanentCode]         NVARCHAR (250) NULL,
+    [IsActive]           BIT            NULL,
+    [CreatedDate]        DATETIME       NULL,
+    [CreatedBy]          BIGINT         NULL,
+    [UpdatedDate]        DATETIME       NULL,
+    [UpdatedBy]          BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([ExternalProviderId] ASC)
 );
+
+
 
 
 GO

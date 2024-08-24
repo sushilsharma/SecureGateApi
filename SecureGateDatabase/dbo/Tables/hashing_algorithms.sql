@@ -1,8 +1,16 @@
 ﻿CREATE TABLE [dbo].[hashing_algorithms] (
-    [HashAlgorithmId] BIGINT        IDENTITY (1, 1) NOT NULL,
-    [AlgorithmName]   NVARCHAR (10) NOT NULL,
+    [HashAlgorithmId] BIGINT         IDENTITY (1, 1) NOT NULL,
+    [AlgorithmName]   NVARCHAR (10)  NOT NULL,
+    [TanentCode]      NVARCHAR (250) NULL,
+    [IsActive]        BIT            NULL,
+    [CreatedDate]     DATETIME       NULL,
+    [CreatedBy]       BIGINT         NULL,
+    [UpdatedDate]     DATETIME       NULL,
+    [UpdatedBy]       BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([HashAlgorithmId] ASC)
 );
+
+
 
 
 GO

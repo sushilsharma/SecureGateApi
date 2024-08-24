@@ -1,8 +1,16 @@
 ﻿CREATE TABLE [dbo].[email_validation_status] (
-    [EmailValidationStatusId] BIGINT        IDENTITY (1, 1) NOT NULL,
-    [StatusDescription]       NVARCHAR (20) NOT NULL,
+    [EmailValidationStatusId] BIGINT         IDENTITY (1, 1) NOT NULL,
+    [StatusDescription]       NVARCHAR (20)  NOT NULL,
+    [TanentCode]              NVARCHAR (250) NULL,
+    [IsActive]                BIT            NULL,
+    [CreatedDate]             DATETIME       NULL,
+    [CreatedBy]               BIGINT         NULL,
+    [UpdatedDate]             DATETIME       NULL,
+    [UpdatedBy]               BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([EmailValidationStatusId] ASC)
 );
+
+
 
 
 GO

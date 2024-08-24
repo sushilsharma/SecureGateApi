@@ -13,9 +13,17 @@
     [InterestAmount]    DECIMAL (10, 2) NULL,
     [TotalWithInterest] DECIMAL (10, 2) NULL,
     [FlatId]            BIGINT          NULL,
+    [TanentCode]        NVARCHAR (250)  NULL,
+    [IsActive]          BIT             NULL,
+    [CreatedDate]       DATETIME        NULL,
+    [CreatedBy]         BIGINT          NULL,
+    [UpdatedDate]       DATETIME        NULL,
+    [UpdatedBy]         BIGINT          NULL,
     CONSTRAINT [PK__Bills__11F2FC6A3950F34E] PRIMARY KEY CLUSTERED ([BillId] ASC),
     CONSTRAINT [FK__Bills__FlatId__778AC167] FOREIGN KEY ([FlatId]) REFERENCES [dbo].[Flats] ([FlatId])
 );
+
+
 
 
 GO

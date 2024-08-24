@@ -2,10 +2,18 @@
     [UserId]                BIGINT         NOT NULL,
     [ExternalProviderId]    BIGINT         NOT NULL,
     [ExternalProviderToken] NVARCHAR (100) NOT NULL,
+    [TanentCode]            NVARCHAR (250) NULL,
+    [IsActive]              BIT            NULL,
+    [CreatedDate]           DATETIME       NULL,
+    [CreatedBy]             BIGINT         NULL,
+    [UpdatedDate]           DATETIME       NULL,
+    [UpdatedBy]             BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([UserId] ASC, [ExternalProviderId] ASC),
     FOREIGN KEY ([ExternalProviderId]) REFERENCES [dbo].[external_providers] ([ExternalProviderId]),
     FOREIGN KEY ([UserId]) REFERENCES [dbo].[user_account] ([UserId])
 );
+
+
 
 
 GO

@@ -1,10 +1,18 @@
 ﻿CREATE TABLE [dbo].[granted_permissions] (
-    [RoleId]       BIGINT NOT NULL,
-    [PermissionId] BIGINT NOT NULL,
+    [RoleId]       BIGINT         NOT NULL,
+    [PermissionId] BIGINT         NOT NULL,
+    [TanentCode]   NVARCHAR (250) NULL,
+    [IsActive]     BIT            NULL,
+    [CreatedDate]  DATETIME       NULL,
+    [CreatedBy]    BIGINT         NULL,
+    [UpdatedDate]  DATETIME       NULL,
+    [UpdatedBy]    BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([RoleId] ASC, [PermissionId] ASC),
     FOREIGN KEY ([PermissionId]) REFERENCES [dbo].[permissions] ([PermissionId]),
     FOREIGN KEY ([RoleId]) REFERENCES [dbo].[user_roles] ([RoleId])
 );
+
+
 
 
 GO

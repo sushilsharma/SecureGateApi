@@ -1,8 +1,16 @@
 ﻿CREATE TABLE [dbo].[user_roles] (
-    [RoleId]          BIGINT        IDENTITY (1, 1) NOT NULL,
-    [RoleDescription] NVARCHAR (20) NOT NULL,
+    [RoleId]          BIGINT         IDENTITY (1, 1) NOT NULL,
+    [RoleDescription] NVARCHAR (20)  NOT NULL,
+    [TanentCode]      NVARCHAR (250) NULL,
+    [IsActive]        BIT            NULL,
+    [CreatedDate]     DATETIME       NULL,
+    [CreatedBy]       BIGINT         NULL,
+    [UpdatedDate]     DATETIME       NULL,
+    [UpdatedBy]       BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([RoleId] ASC)
 );
+
+
 
 
 GO

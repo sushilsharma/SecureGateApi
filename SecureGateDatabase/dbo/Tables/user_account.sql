@@ -5,9 +5,17 @@
     [Gender]      CHAR (1)       NOT NULL,
     [DateOfBirth] DATE           NOT NULL,
     [RoleId]      BIGINT         NULL,
+    [TanentCode]  NVARCHAR (250) NULL,
+    [IsActive]    BIT            NULL,
+    [CreatedDate] DATETIME       NULL,
+    [CreatedBy]   BIGINT         NULL,
+    [UpdatedDate] DATETIME       NULL,
+    [UpdatedBy]   BIGINT         NULL,
     PRIMARY KEY CLUSTERED ([UserId] ASC),
     FOREIGN KEY ([RoleId]) REFERENCES [dbo].[user_roles] ([RoleId])
 );
+
+
 
 
 GO

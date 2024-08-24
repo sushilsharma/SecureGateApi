@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.IO.IsolatedStorage;
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Xml;
@@ -411,14 +412,16 @@ namespace SecureGate.Framework.Serializer
         {
             T serializableObject = null;
 
-            using (var fileStream = CreateFileStream(isolatedStorageFolder, path))
+            using (var fileStream = new IsolatedStorageFileStream(path, FileMode.Open, isolatedStorageFolder))
             {
-                var binaryFormatter = new BinaryFormatter();
-                serializableObject = binaryFormatter.Deserialize(fileStream) as T;
+                DataContractSerializer serializer = new DataContractSerializer(typeof(T));
+                serializableObject = (T)serializer.ReadObject(fileStream);
             }
 
             return serializableObject;
         }
+
+ 
 
         private static T LoadFromDocumentFormat(Type[] extraTypes, string path,
             IsolatedStorageFile isolatedStorageFolder)
@@ -484,12 +487,12 @@ namespace SecureGate.Framework.Serializer
         }
 
         private static void SaveToBinaryFormat(T serializableObject, string path,
-            IsolatedStorageFile isolatedStorageFolder)
+           IsolatedStorageFile isolatedStorageFolder)
         {
-            using (var fileStream = CreateFileStream(isolatedStorageFolder, path))
+            using (var fileStream = new IsolatedStorageFileStream(path, FileMode.Create, isolatedStorageFolder))
             {
-                var binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(fileStream, serializableObject);
+                DataContractSerializer serializer = new DataContractSerializer(typeof(T));
+                serializer.WriteObject(fileStream, serializableObject);
             }
         }
 

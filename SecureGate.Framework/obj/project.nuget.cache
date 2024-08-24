@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "JkJ3rsYURTh9JdLXMIOVlhJRcph1CgZ36W5WDHTVoYjmCDPQOHlAg9gN6gV4/UbZ8oFc9FJUKXMuCKr8FKW1/w==",
+  "dgSpecHash": "aPu0apgqwaRJNUnif664wU+XEuU5zfZTtsZEtgIWf49p/Dm/W/d022B72WWatErYTHEjEopix7uR/RCcoQRlPA==",
   "success": true,
   "projectFilePath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj",
   "expectedPackageFiles": [
@@ -28,7 +28,6 @@
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.diagnostics.performancecounter\\5.0.0\\system.diagnostics.performancecounter.5.0.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
-    "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.runtime.caching\\6.0.0\\system.runtime.caching.6.0.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",

@@ -1,0 +1,14 @@
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.csproj.AssemblyReference.cache
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.AssemblyInfoInputs.cache
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.AssemblyInfo.cs
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.csproj.CoreCompileInputs.cache
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\bin\Debug\net7.0\SecureGate.Framework.deps.json
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\bin\Debug\net7.0\SecureGate.Framework.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\bin\Debug\net7.0\SecureGate.Framework.pdb
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\bin\Debug\net7.0\Excel.4.5.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.csproj.CopyComplete
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\refint\SecureGate.Framework.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\SecureGate.Framework.pdb
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGate.Framework\obj\Debug\net7.0\ref\SecureGate.Framework.dll

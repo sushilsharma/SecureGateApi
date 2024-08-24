@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uwQ/y88KhCrWNOPEo5rb9ZVYyA9/FRRJvJn/KQojriyXpxIuExCKlsXUX94LOoVpTB2lwfCNLePrmkq+eukjrQ==",
+  "dgSpecHash": "aNmFCRw3l5nnPpoMFotf86RcHvrRIo2EmMdwgbeJtj9WbDoVvWB2rS+V6El1ug+h5z170hV8hmPyCk3qUvgItg==",
   "success": true,
   "projectFilePath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGateApi\\SecureGateApi.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,6 @@
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
-    "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.net.http\\4.3.0\\system.net.http.4.3.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\system.net.sockets\\4.3.0\\system.net.sockets.4.3.0.nupkg.sha512",

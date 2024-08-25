@@ -52,6 +52,7 @@ BEGIN
 
         -- Insert or Update Flats
         SELECT
+			@FlatId= tmp.[FlatId],
             @FlatNo = tmp.[FlatNo],
             @Wing = tmp.[Wing],
             @TotalArea = tmp.[TotalArea],
@@ -82,6 +83,7 @@ BEGIN
         BEGIN
             UPDATE dbo.Flats
             SET
+			@FlatId=FlatId,
                 FlatNo = @FlatNo,
                 Wing = @Wing,
                 TotalArea = @TotalArea,
@@ -90,7 +92,7 @@ BEGIN
                 IsActive = @IsActive,
                 UpdatedDate = (select dbo.GetDateLocal()),
                 UpdatedBy = @UpdatedBy
-            WHERE FlatId = @FlatId;
+            WHERE FlatNo = @FlatNo and Wing= @Wing and TanentCode=@TanentCode;
         END
         ELSE
         BEGIN
@@ -116,6 +118,8 @@ BEGIN
                 (select dbo.GetDateLocal()),
                 @CreatedBy
             );
+
+		  SET @FlatId = SCOPE_IDENTITY()
         END
 
        
@@ -133,7 +137,6 @@ BEGIN
             @TokenGenerationTime = tmp.[TokenGenerationTime],
             @PasswordRecoveryToken = tmp.[PasswordRecoveryToken],
             @RecoveryTokenTime = tmp.[RecoveryTokenTime],
-            @FlatId = tmp.[FlatId],
             @TanentCode = tmp.[TanentCode],
             @IsActive = tmp.[IsActive],
             @CreatedDate = tmp.[CreatedDate],

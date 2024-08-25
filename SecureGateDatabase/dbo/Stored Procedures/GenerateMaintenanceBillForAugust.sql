@@ -11,10 +11,13 @@ BEGIN
     -- Get MemberId, RoomTypeId, FlatNo, and TotalArea from Members table based on FlatId
     SELECT 
         @MemberId = MemberId, 
-        @RoomTypeId = RoomTypeId, 
-        @TotalArea = TotalArea
+        @RoomTypeId = RoomTypeId
+     
     FROM Members
     WHERE FlatId = @FlatId;
+
+
+	Select    @TotalArea = TotalArea from Flats  WHERE FlatId = @FlatId;
 
     IF @MemberId IS NULL
     BEGIN

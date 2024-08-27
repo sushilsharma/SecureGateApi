@@ -1,10 +1,7 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/SecureGateDatabase/SecureGateDatabase.jfm
-.vs/SecureGateApi/FileContentIndex/010002aa-37c0-4729-a54a-6c37b951631b.vsidx
-.vs/SecureGateApi/FileContentIndex/4ddb04ad-c6eb-49f9-b812-848436b92184.vsidx
-SecureGateDatabase/SecureGateDatabase.dbmdl
-SecureGateDatabase/SecureGateDatabase.dbmdl
-*.dbmdl
+*.vsidx
+*.vsidx
+/.vs/SecureGateApi/FileContentIndex

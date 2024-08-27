@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj": {}
+    "D:\\TestProject\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj": {}
   },
   "projects": {
-    "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj": {
+    "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj",
+        "projectUniqueName": "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj",
         "projectName": "SecureGate.APIController.Framework",
-        "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj",
-        "packagesPath": "C:\\Users\\Sushil Sharma\\.nuget\\packages\\",
-        "outputPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\obj\\",
+        "projectPath": "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sushil Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj": {
-                "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj"
+              "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj": {
+                "projectPath": "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj"
               }
             }
           }
@@ -89,25 +84,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj": {
+    "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj",
+        "projectUniqueName": "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj",
         "projectName": "SecureGate.Framework",
-        "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj",
-        "packagesPath": "C:\\Users\\Sushil Sharma\\.nuget\\packages\\",
-        "outputPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Framework\\obj\\",
+        "projectPath": "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\SecureGate.Framework.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\TestProject\\SecureGateApi\\SecureGate.Framework\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sushil Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -115,7 +106,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -179,25 +169,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj": {
+    "D:\\TestProject\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj",
+        "projectUniqueName": "D:\\TestProject\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj",
         "projectName": "SecureGate.WebApi.SignalRHub",
-        "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj",
-        "packagesPath": "C:\\Users\\Sushil Sharma\\.nuget\\packages\\",
-        "outputPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\obj\\",
+        "projectPath": "D:\\TestProject\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\SecureGate.WebApi.SignalRHub.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\TestProject\\SecureGateApi\\SecureGate.WebApi.SignalRHub\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Sushil Sharma\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -205,15 +191,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj": {
-                "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj"
+              "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj": {
+                "projectPath": "D:\\TestProject\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj"
               }
             }
           }
@@ -256,7 +241,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

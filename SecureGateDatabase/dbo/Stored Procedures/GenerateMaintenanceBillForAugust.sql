@@ -10,8 +10,8 @@ BEGIN
 
     -- Get MemberId, RoomTypeId, FlatNo, and TotalArea from Members table based on FlatId
     SELECT 
-        @MemberId = MemberId, 
-        @RoomTypeId = RoomTypeId
+        @MemberId = MemberId
+        --@RoomTypeId = RoomTypeId
      
     FROM Members
     WHERE FlatId = @FlatId;

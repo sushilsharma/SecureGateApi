@@ -5,3 +5,5 @@
 *.vsidx
 *.vsidx
 /.vs/SecureGateApi/FileContentIndex
+/SecureGate.DataAccess.Common/obj
+/SecureGate.DataAccess.Common/obj

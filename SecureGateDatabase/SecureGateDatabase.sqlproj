@@ -97,5 +97,22 @@
     <Build Include="dbo\Stored Procedures\SSP_MenuList.sql" />
     <Build Include="dbo\Stored Procedures\SSP_GetPageControlAccessByRoleAndUserID.sql" />
     <Build Include="dbo\Tables\Customer.sql" />
+    <Build Include="dbo\Tables\UserDeviceTokenMapping.sql" />
+    <Build Include="dbo\Tables\FCMserverDetails.sql" />
+    <Build Include="dbo\Tables\FCMEventMasterMapping.sql" />
+    <Build Include="dbo\Tables\EventUserTypeMapping.sql" />
+    <Build Include="dbo\Tables\EventRule.sql" />
+    <Build Include="dbo\Tables\EventRetrySettings.sql" />
+    <Build Include="dbo\Tables\EventRecipient.sql" />
+    <Build Include="dbo\Tables\EventObjectPropertiesMapping.sql" />
+    <Build Include="dbo\Tables\EventObjectMaaping.sql" />
+    <Build Include="dbo\Tables\EventNotification.sql" />
+    <Build Include="dbo\Tables\EventMaster.sql" />
+    <Build Include="dbo\Tables\EventContent.sql" />
+    <Build Include="dbo\Tables\EventConfiguration.sql" />
+    <Build Include="dbo\Stored Procedures\USP_Customer.sql" />
+    <Build Include="dbo\Stored Procedures\SSP_GetCustomerByMnemonic.sql" />
+    <Build Include="dbo\Stored Procedures\ISP_Customer.sql" />
+    <Build Include="dbo\Stored Procedures\GetCustomerByMnemonic.sql" />
   </ItemGroup>
 </Project>

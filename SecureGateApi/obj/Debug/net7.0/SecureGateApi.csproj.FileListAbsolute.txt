@@ -90,3 +90,8 @@ D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\obj\Debug\net7.0\refint\Secu
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\obj\Debug\net7.0\SecureGateApi.pdb
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\obj\Debug\net7.0\SecureGateApi.genruntimeconfig.cache
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\obj\Debug\net7.0\ref\SecureGateApi.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.deps.json
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.runtimeconfig.json
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.exe
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.pdb

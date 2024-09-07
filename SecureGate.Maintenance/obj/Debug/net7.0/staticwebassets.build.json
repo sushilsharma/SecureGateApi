@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NCIaxPro6hBzgcXojbQIDqS4uQx6nZwbnRfgvbP3Tmk=",
+  "Source": "SecureGate.Maintenance",
+  "BasePath": "_content/SecureGate.Maintenance",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

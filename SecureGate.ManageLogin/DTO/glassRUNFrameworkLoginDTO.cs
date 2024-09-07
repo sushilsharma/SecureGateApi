@@ -8,8 +8,8 @@ using System.Xml.Serialization;
 namespace SecureGate.ManageLogin.DTO
 {
     [Serializable]
-    [XmlRoot(ElementName = "glassRUNFrameworkLogin", IsNullable = false)]
-    public class glassRUNFrameworkLoginDTO
+    [XmlRoot(ElementName = "SecureGateFrameworkLogin", IsNullable = false)]
+    public class SecureGateFrameworkLoginDTO
     {
 
         public string AppLatestVersionNo { get; set; }
@@ -28,15 +28,15 @@ namespace SecureGate.ManageLogin.DTO
         public string Password { get; set; }
         public string LastSyncDateTime { get; set; }
 
-        [XmlElement(ElementName = "glassRUNFrameworkLoginList")]
-        public List<glassRUNFrameworkLoginDTO> AppLatestVersionList { get; set; }
+        [XmlElement(ElementName = "SecureGateFrameworkLoginList")]
+        public List<SecureGateFrameworkLoginDTO> AppLatestVersionList { get; set; }
 
         [XmlElement(ElementName = "UserAndDeviceDetails")]
         public UserAndDeviceDetailsDTO UserAndDeviceDetails { get; set; }
 
-        public glassRUNFrameworkLoginDTO()
+        public SecureGateFrameworkLoginDTO()
         {
-            AppLatestVersionList = new List<glassRUNFrameworkLoginDTO>();
+            AppLatestVersionList = new List<SecureGateFrameworkLoginDTO>();
         }
 
     }

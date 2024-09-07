@@ -29,7 +29,7 @@ namespace SecureGateApi
                 var builder = new StringBuilder();
                 var request = await FormatRequest(context.Request);
                 builder.AppendLine("Request headers:");
-                List<string> lstHeaders = new List<string> { "Authorization", "User-Agent", "OS-Name", "OS-Version", "glassRUN-APP-Name", "glassRUN-APP-Version" };
+                List<string> lstHeaders = new List<string> { "Authorization", "User-Agent", "OS-Name", "OS-Version", "SecureGate-APP-Name", "SecureGate-APP-Version" };
                 foreach (var header in context.Request.Headers)
                 {
                     var matchingvalues = lstHeaders.Where(stringToCheck => stringToCheck.Contains(header.Key));

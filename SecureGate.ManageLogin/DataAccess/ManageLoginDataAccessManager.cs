@@ -17,7 +17,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             //[]
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_Login_GetLoginDetails", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -37,7 +37,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T ValidateLogin<T>(LoginDTO loginDTO)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateLoginOTP", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -57,7 +57,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ValidateOTP<T>(LoginDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateOTP", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -84,7 +84,7 @@ namespace SecureGate.ManageLogin.DataAccess
             //try
             //{
             string data = "";
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("ISP_LoginOTP", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -137,7 +137,7 @@ namespace SecureGate.ManageLogin.DataAccess
             try
             {
                 string data = "";
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_LoginOTP", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -167,7 +167,7 @@ namespace SecureGate.ManageLogin.DataAccess
             {
                 string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
                 string data = "";
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_LoginOTP_Regenerated", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -228,7 +228,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("USP_UpdateUserPassword", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -274,7 +274,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ContactInformationUpDate<T>(LoginDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("ISP_ContactInformationByLoginId_V2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -308,7 +308,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ValidateUserNameAndMobileNumber<T>(LoginDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateUserNameAndMobileNumber_V2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -335,7 +335,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetChildUserListV2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -356,7 +356,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetSuperUserListV2<T>(UserOutletMappingDTO userOutletMappingDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(userOutletMappingDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetSuperUserListV2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -377,7 +377,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T SaveUserOutletMapping<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("ISP_UserOutletMapping", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -395,7 +395,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T UpdateUserOutletMapping<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("USP_UserOutletMapping", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -413,7 +413,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetB2BLogin<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetB2BLogin_New", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -429,7 +429,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T ActivateDeactivateCompany<T>(LoginDTO loginDTO)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ActivateDeactivateCompany", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -451,7 +451,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T UpdateLanguageForUser<T>(LoginDTO loginDTO)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("USP_UpdateLanguageForUser", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -474,7 +474,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetAppNotificationsByUserId<T>(LoginDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetAppNotificationsByUserId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -497,7 +497,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ValidateUserAndOnboardingReference<T>(LoginDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateUserAndOnboardingReference", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -521,7 +521,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static string GetSettingMasterBySettingParameter(string settingParameter)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_SettingMasterBySettingParameter", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -553,7 +553,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T LoadAllEnvironmentUrl<T>(UserIdentityDTO loginDTO)
         {
             string UserAndDeviceDetailsDTOXML = ObjectXMLSerializer<UserAndDeviceDetailsDTO>.Save(loginDTO.UserAndDeviceDetails);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetAllEnvironmentURL", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -576,7 +576,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             try
             {
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_UpdateLoginToken", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -605,7 +605,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ValidateToken<T>(LoginDTO loginDTO)
         {
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateToken", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -623,7 +623,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             //[]
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_Login_GetLoginDetailsById", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -640,7 +640,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T UpdateUserIdentityAlternateUserName<T>(UserIdentityDTO userIdentityDTO)
         {
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("USP_UserIdentityAlternateUserName_V2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -666,7 +666,7 @@ namespace SecureGate.ManageLogin.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_UpdateLoginHistoryB2BApp", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -697,7 +697,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("DSP_Login", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -729,7 +729,7 @@ namespace SecureGate.ManageLogin.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_LocationDetailsForB2BApp", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -755,7 +755,7 @@ namespace SecureGate.ManageLogin.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_CustomerApp_CustomerProfile", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -780,7 +780,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T CheckDuplicateUser<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_DuplicateUserCheck", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -801,7 +801,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("ISP_Login", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -837,7 +837,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("USP_Login_New", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -867,7 +867,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T UpdateDigitalOnBoardingLink<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("USP_UpdateDigitalOnBoardingLinkStatus", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -884,7 +884,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T ValidateUserTokenKey<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ValidateUserTokenKey", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -901,7 +901,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_UserDetails_Paging", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -922,7 +922,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetUserUserProfileByUserLoginId<T>(long LoginId,string Username)
         {
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_Login_SelectByUserloginId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -947,7 +947,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetPolicyByRolemasterId<T>(long RoleMasterid)
         {
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_PasswordPolicy_SelectByRoleMasterId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -964,7 +964,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T GetLoginByUserProfileId<T>(string ProfileId)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_Login_SelectByUserProfileId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -985,7 +985,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T UpdateLoginPassword<T>(string xmlDoc)
         {
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("USP_Login", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1005,7 +1005,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_LookUpList_SelectByCritiera", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1027,7 +1027,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string outputJson = "";
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_LoadAllDocumentRequired", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1047,7 +1047,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string GetAllCompanyListByDropDown(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_CompanyDetailList_SelectByDropDown", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1067,7 +1067,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string GetAllShipToListByCompanyId(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_ShipTo_ByCompanyId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1088,7 +1088,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string LoadAllRoleMaster(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetAllRoleMaster", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1113,7 +1113,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_LoadLoginDetailByLoginId", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1142,7 +1142,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetPageRoleWiseAccessDetailByRoleORUserID", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -1163,7 +1163,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("USP_InsertAndUpdateRoleWisePageMappingAndRoleWiseFieldAccess", connection);
                 command.CommandType = CommandType.StoredProcedure;

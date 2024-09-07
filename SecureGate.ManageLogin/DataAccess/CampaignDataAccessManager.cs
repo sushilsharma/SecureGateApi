@@ -16,7 +16,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string CreateCampaign(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("ISP_CreateCampaign", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -34,7 +34,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string CompanyAndUserDetails(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_CompanyAndUserDetails", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -54,7 +54,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static string MappedCampaignToUser(string jsonString)
         {
             string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseWriteConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseWriteConnection))
             {
                 IDbCommand command = new SqlCommand("USP_MappedCampaignToUser", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -72,7 +72,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T SearchUserDetails<T>(dynamic Json)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_SearchUserDetailsV2", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -129,7 +129,7 @@ namespace SecureGate.ManageLogin.DataAccess
 
         public static T GetCampaignData<T>(dynamic Json)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_SearchCampaignDetailsV2", connection);
                 command.CommandType = CommandType.StoredProcedure;

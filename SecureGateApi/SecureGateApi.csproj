@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SecureGate.APIController.Framework\SecureGate.APIController.Framework.csproj" />
+    <ProjectReference Include="..\SecureGate.Customer\SecureGate.Customer.csproj" />
     <ProjectReference Include="..\SecureGate.DataAccess.Common\SecureGate.DataAccess.Common.csproj" />
     <ProjectReference Include="..\SecureGate.Framework\SecureGate.Framework.csproj" />
     <ProjectReference Include="..\SecureGate.Maintenance\SecureGate.Maintenance.csproj" />

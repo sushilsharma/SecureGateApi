@@ -4,7 +4,7 @@ using SecureGate.Framework;
 using SecureGate.Framework.DataAccess;
 using SecureGate.Framework.PasswordUtility;
 using SecureGate.Framework.Serializer;
-//using glassRUNProduct.DataAccess.Common;
+//using SecureGateProduct.DataAccess.Common;
 using SecureGate.ManageLogin.DataAccess;
 using SecureGate.ManageLogin.DTO;
 using Newtonsoft.Json;

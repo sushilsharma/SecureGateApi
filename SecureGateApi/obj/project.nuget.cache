@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1dWqCJ4OVet8M74dzYpBVSMVEBb4GW0IGe+eQm6oBOl8MlNlxwUq5kBslvzcYiK1yTkDCqto2+QRHp3mxffUjg==",
+  "dgSpecHash": "8b5SEpUzU0sBHf1HSbKu5CsYeWvzbJ10qkbujjuOoyNQZ9yHfFF47dWLOWqVKRpo9dghRjkho9sN/DffbYYAGQ==",
   "success": true,
   "projectFilePath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGateApi\\SecureGateApi.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.15\\microsoft.aspnetcore.jsonpatch.5.0.15.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.15\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
+    "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.1\\microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\1.1.0\\microsoft.aspnetcore.signalr.common.1.1.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.signalr.core\\1.1.0\\microsoft.aspnetcore.signalr.core.1.1.0.nupkg.sha512",
     "C:\\Users\\Sushil Sharma\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\1.1.0\\microsoft.aspnetcore.signalr.protocols.json.1.1.0.nupkg.sha512",

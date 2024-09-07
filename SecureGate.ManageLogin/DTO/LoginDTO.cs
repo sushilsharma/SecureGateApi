@@ -39,6 +39,7 @@ namespace SecureGate.ManageLogin.DTO
         public bool IsActive { get; set; }
         public string IsValid { get; set; }
         public string ReasonCode { get; set; }
+        public string CustomerMnemonic { get; set; }
         public string AccessKey { get; set; }
         public bool IsOTPUsed { get; set; }
         public bool IsCurrentOTPRegenerated { get; set; }

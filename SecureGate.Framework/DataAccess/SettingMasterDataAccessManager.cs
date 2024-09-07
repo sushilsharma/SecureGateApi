@@ -14,7 +14,7 @@ namespace SecureGate.Framework.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_AllSettingMasterList", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -43,7 +43,7 @@ namespace SecureGate.Framework.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_LoadAllCultureMaster", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -73,7 +73,7 @@ namespace SecureGate.Framework.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_ResourceDataForApp", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -103,7 +103,7 @@ namespace SecureGate.Framework.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_GetAllLookupForApp", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -131,7 +131,7 @@ namespace SecureGate.Framework.DataAccess
             try
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_GetAllLookupList", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -157,7 +157,7 @@ namespace SecureGate.Framework.DataAccess
 
         public static string GetSettingMasterBySettingParameter(string settingParameter)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_SettingMasterBySettingParameter", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -191,7 +191,7 @@ namespace SecureGate.Framework.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("ISP_SettingMaster", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -220,7 +220,7 @@ namespace SecureGate.Framework.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_SettingMaster", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -249,7 +249,7 @@ namespace SecureGate.Framework.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_SettingMasterById", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -278,7 +278,7 @@ namespace SecureGate.Framework.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("SSP_SettingMaster_Paging", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -307,7 +307,7 @@ namespace SecureGate.Framework.DataAccess
             {
                 string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("DSP_SettingMaster", connection);
                     command.CommandType = CommandType.StoredProcedure;
@@ -333,7 +333,7 @@ namespace SecureGate.Framework.DataAccess
 
         public static T GetSettingMasterBySettingParameter<T>(string settingParameter)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_SettingMasterBySettingParameterV2", connection);
                 command.CommandType = CommandType.StoredProcedure;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SecureGate.ManageLogin.Business
 {
-    public interface IglassRUNFrameworkLoginManager
+    public interface ISecureGateFrameworkLoginManager
     {
         IEnumerable<LoginDTO> ValidateLogin(LoginDTO loginDTO);
         IEnumerable<LoginDTO> GetUserDetailsByUsername(LoginDTO loginDTO);

@@ -6,10 +6,10 @@ using SecureGate.APIController.Framework.AppLogger;
 
 namespace SecureGate.ManageLogin.Business
 {
-    public class glassRUNFrameworkLoginManager : IglassRUNFrameworkLoginManager
+    public class SecureGateFrameworkLoginManager : ISecureGateFrameworkLoginManager
     {
         BaseAppLogger _loggerInstance;
-        public glassRUNFrameworkLoginManager(BaseAppLogger loggerInstance)
+        public SecureGateFrameworkLoginManager(BaseAppLogger loggerInstance)
         {
             _loggerInstance = loggerInstance;
         }
@@ -17,7 +17,7 @@ namespace SecureGate.ManageLogin.Business
         {
             IEnumerable<LoginDTO> loginDTOs = null;
             string loginXml = ObjectXMLSerializer<LoginDTO>.Save(loginDTO);
-            string output = glassRUNFrameworkLoginDataAccessManager.ValidateLogin<string>(loginXml);
+            string output = SecureGateFrameworkLoginDataAccessManager.ValidateLogin<string>(loginXml);
             if (output != null)
             {
                 loginDTOs = ObjectXMLSerializer<LoginDTO>.Load(output).LoginList;
@@ -29,7 +29,7 @@ namespace SecureGate.ManageLogin.Business
         {
             IEnumerable<LoginDTO> loginDTOs = null;
             string loginXml = ObjectXMLSerializer<LoginDTO>.Save(loginDTO);
-            string output = glassRUNFrameworkLoginDataAccessManager.GetUserDetailsByUsername<string>(loginXml);
+            string output = SecureGateFrameworkLoginDataAccessManager.GetUserDetailsByUsername<string>(loginXml);
             if (output != null)
             {
                 loginDTOs = ObjectXMLSerializer<LoginDTO>.Load(output).LoginList;
@@ -41,7 +41,7 @@ namespace SecureGate.ManageLogin.Business
         {
             IEnumerable<LoginDTO> loginDTOs = null;
             string loginXml = ObjectXMLSerializer<LoginDTO>.Save(loginDTO);
-            string output = glassRUNFrameworkLoginDataAccessManager.GetUserFullDetailsByUsername<string>(loginXml);
+            string output = SecureGateFrameworkLoginDataAccessManager.GetUserFullDetailsByUsername<string>(loginXml);
             if (output != null)
             {
                 loginDTOs = ObjectXMLSerializer<LoginDTO>.Load(output).LoginList;
@@ -53,7 +53,7 @@ namespace SecureGate.ManageLogin.Business
 
         public string UpdateToken(long userId, string tokenString, string apptype)
         {
-            string output = glassRUNFrameworkLoginDataAccessManager.UpdateToken(userId, tokenString, apptype);
+            string output = SecureGateFrameworkLoginDataAccessManager.UpdateToken(userId, tokenString, apptype);
             return output;
         }
     }

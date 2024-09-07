@@ -17,7 +17,7 @@ namespace SecureGate.APIController.Framework.DataAccess
         {
             //[]
 
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_Login_GetLoginDetailsById", connection);
                 command.CommandType = CommandType.StoredProcedure;

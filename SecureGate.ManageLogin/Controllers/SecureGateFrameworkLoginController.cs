@@ -25,7 +25,7 @@ namespace SecureGate.ManageLogin.Controllers
 
     [ApiController]
     [Route("[controller]")]
-    public class glassRUNFrameworkLoginController : BaseAPIController
+    public class SecureGateFrameworkLoginController : BaseAPIController
     {
         protected override EnumLoggerType LoggerName
         {
@@ -34,18 +34,18 @@ namespace SecureGate.ManageLogin.Controllers
 
 
         [HttpPost]
-        [Route("glassRUNLogin")]
+        [Route("SecureGateLogin")]
 
-        public IActionResult glassRUNLogin(glassRUNFrameworkLoginDTO glassRUNFrameworkLoginDto)
+        public IActionResult SecureGateLogin(SecureGateFrameworkLoginDTO SecureGateFrameworkLoginDto)
         {
-            LoggerInstance.Information("glassRUNLogin", 5002);
+            LoggerInstance.Information("SecureGateLogin", 5002);
 
             JObject returnObject = new JObject();
             try
             {
-                string Input = JsonConvert.SerializeObject(glassRUNFrameworkLoginDto);
+                string Input = JsonConvert.SerializeObject(SecureGateFrameworkLoginDto);
 
-                LoggerInstance.Information("glassRUNLogin" + Input, 5002);
+                LoggerInstance.Information("SecureGateLogin" + Input, 5002);
 
 
 
@@ -56,10 +56,10 @@ namespace SecureGate.ManageLogin.Controllers
                 newJson.LoginDetails = null;
 
                 dynamic checkAppVersion = new ExpandoObject();
-                checkAppVersion.AppLatestVersionNo = glassRUNFrameworkLoginDto.AppLatestVersionNo;
-                checkAppVersion.AppLatestBuildNo = glassRUNFrameworkLoginDto.AppLatestBuildNo;
-                checkAppVersion.AppType = glassRUNFrameworkLoginDto.AppType;
-                checkAppVersion.UserAndDeviceDetails = glassRUNFrameworkLoginDto.UserAndDeviceDetails;
+                checkAppVersion.AppLatestVersionNo = SecureGateFrameworkLoginDto.AppLatestVersionNo;
+                checkAppVersion.AppLatestBuildNo = SecureGateFrameworkLoginDto.AppLatestBuildNo;
+                checkAppVersion.AppType = SecureGateFrameworkLoginDto.AppType;
+                checkAppVersion.UserAndDeviceDetails = SecureGateFrameworkLoginDto.UserAndDeviceDetails;
 
                 string chkApp = JsonConvert.SerializeObject(checkAppVersion);
 
@@ -88,9 +88,9 @@ namespace SecureGate.ManageLogin.Controllers
                     {
                         string IsValidLogin = "NO";
                         LoginDTO loginDTO = new LoginDTO();
-                        loginDTO.Username = glassRUNFrameworkLoginDto.Username;
-                        loginDTO.UserPassword = glassRUNFrameworkLoginDto.Password;
-                        loginDTO.UserAndDeviceDetails = glassRUNFrameworkLoginDto.UserAndDeviceDetails;
+                        loginDTO.Username = SecureGateFrameworkLoginDto.Username;
+                        loginDTO.UserPassword = SecureGateFrameworkLoginDto.Password;
+                        loginDTO.UserAndDeviceDetails = SecureGateFrameworkLoginDto.UserAndDeviceDetails;
                         string loginDto = JsonConvert.SerializeObject(loginDTO);
 
                         string ValidateLogin = GetServiceUrl("ValidateLogin");
@@ -114,9 +114,9 @@ namespace SecureGate.ManageLogin.Controllers
                         if (IsValidLogin != "NO")
                         {
                             dynamic getResources = new ExpandoObject();
-                            getResources.ResourceType = Convert.ToString(glassRUNFrameworkLoginDto.AppType);
-                            getResources.LastSyncDateTime = Convert.ToString(glassRUNFrameworkLoginDto.LastSyncDateTime);
-                            getResources.UserAndDeviceDetails = glassRUNFrameworkLoginDto.UserAndDeviceDetails;
+                            getResources.ResourceType = Convert.ToString(SecureGateFrameworkLoginDto.AppType);
+                            getResources.LastSyncDateTime = Convert.ToString(SecureGateFrameworkLoginDto.LastSyncDateTime);
+                            getResources.UserAndDeviceDetails = SecureGateFrameworkLoginDto.UserAndDeviceDetails;
 
                             dynamic getResourcesJson = new ExpandoObject();
                             getResourcesJson.Json = getResources;
@@ -164,7 +164,7 @@ namespace SecureGate.ManageLogin.Controllers
             LoggerInstance.Information("UserName : " + loginDTO.Username, 5002);
             try
             {
-                IglassRUNFrameworkLoginManager loginManager = new glassRUNFrameworkLoginManager(LoggerInstance);
+                ISecureGateFrameworkLoginManager loginManager = new SecureGateFrameworkLoginManager(LoggerInstance);
 
                 IEnumerable<LoginDTO> output = loginManager.GetUserDetailsByUsername(loginDTO);
 
@@ -219,7 +219,7 @@ namespace SecureGate.ManageLogin.Controllers
                                 ValidateIssuerSigningKey = true,
                                 IssuerSigningKey = new SymmetricSecurityKey(key),
                                 ValidateIssuer = true,
-                                ValidIssuer = "glassRUN",
+                                ValidIssuer = "SecureGate",
                                 ValidateAudience = true,
                                 ValidAudience = "enduser",
                                 ValidateLifetime = true,
@@ -227,7 +227,7 @@ namespace SecureGate.ManageLogin.Controllers
                                 RequireExpirationTime = true,
                             };
                             var jwt = new JwtSecurityToken(
-                                   issuer: "glassRUN",
+                                   issuer: "SecureGate",
                                    audience: "enduser",
                                    claims: claims,
                                    notBefore: now,
@@ -353,7 +353,7 @@ namespace SecureGate.ManageLogin.Controllers
             LoggerInstance.Information("UserName : " + loginDTO.Username, 5002);
             try
             {
-                IglassRUNFrameworkLoginManager loginManager = new glassRUNFrameworkLoginManager(LoggerInstance);
+                ISecureGateFrameworkLoginManager loginManager = new SecureGateFrameworkLoginManager(LoggerInstance);
                 IEnumerable<LoginDTO> output = loginManager.GetUserFullDetailsByUsername(loginDTO);
                 return Ok(output);
             }
@@ -376,7 +376,7 @@ namespace SecureGate.ManageLogin.Controllers
             LoggerInstance.Information("UserName : " + loginDTO.Username, 5002);
             try
             {
-                IglassRUNFrameworkLoginManager loginManager = new glassRUNFrameworkLoginManager(LoggerInstance);
+                ISecureGateFrameworkLoginManager loginManager = new SecureGateFrameworkLoginManager(LoggerInstance);
 
                 IEnumerable<LoginDTO> output = loginManager.ValidateLogin(loginDTO);
 
@@ -438,7 +438,7 @@ namespace SecureGate.ManageLogin.Controllers
                                     ValidateIssuerSigningKey = true,
                                     IssuerSigningKey = new SymmetricSecurityKey(key),
                                     ValidateIssuer = true,
-                                    ValidIssuer = "glassRUN",
+                                    ValidIssuer = "SecureGate",
                                     ValidateAudience = true,
                                     ValidAudience = "enduser",
                                     ValidateLifetime = true,
@@ -447,7 +447,7 @@ namespace SecureGate.ManageLogin.Controllers
                                 };
 
                                 var jwt = new JwtSecurityToken(
-                                       issuer: "glassRUN",
+                                       issuer: "SecureGate",
                                        audience: "enduser",
                                        claims: claims,
                                        notBefore: now,

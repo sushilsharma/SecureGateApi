@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace SecureGate.ManageLogin.DataAccess
 {
-    public class glassRUNFrameworkLoginDataAccessManager
+    public class SecureGateFrameworkLoginDataAccessManager
     {
         public static T ValidateLogin<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetLogin", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -32,7 +32,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetUserDetailsByUsername<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetUserDetailsByUsername", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -48,7 +48,7 @@ namespace SecureGate.ManageLogin.DataAccess
         public static T GetUserFullDetailsByUsername<T>(string jsonString)
         {
             string xmlDoc = jsonString;
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetUserFullDetailsByUsername", connection);
                 command.CommandType = CommandType.StoredProcedure;
@@ -64,7 +64,7 @@ namespace SecureGate.ManageLogin.DataAccess
         {
             try
             {
-                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+                using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
                 {
                     IDbCommand command = new SqlCommand("USP_UpdateLoginToken", connection);
                     command.CommandType = CommandType.StoredProcedure;

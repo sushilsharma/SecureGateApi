@@ -17,7 +17,7 @@ namespace SecureGate.DataAccess.Common
 
 				string xmlDoc = JSONAndXMLSerializer.JSONtoXML(jsonString);
 
-				using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+				using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
 				{
 					IDbCommand command = new SqlCommand("SSP_GetRulesByCompanyId", connection);
 					command.CommandType = CommandType.StoredProcedure;

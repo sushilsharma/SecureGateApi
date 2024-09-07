@@ -139,6 +139,25 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.AspNetCore.OpenApi/7.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.4.3"
+        },
+        "compile": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Microsoft.AspNetCore.SignalR.Common/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -2459,6 +2478,26 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "SecureGate.Customer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "7.0.1",
+          "SecureGate.APIController.Framework": "1.0.0",
+          "SecureGate.DataAccess.Common": "1.0.0",
+          "SecureGate.Framework": "1.0.0",
+          "Swashbuckle.AspNetCore": "6.4.0"
+        },
+        "compile": {
+          "bin/placeholder/SecureGate.Customer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SecureGate.Customer.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "SecureGate.DataAccess.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2675,6 +2714,21 @@
         "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.xml",
         "microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512",
         "microsoft.aspnetcore.mvc.newtonsoftjson.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/7.0.1": {
+      "sha512": "rHaFl7SAHM59bwjcmcJMDyAfISkUDZi68iRSrzOZkGzAct72dqnG+w87+aycpayovZ3YLBZXL+6Oh6hAs5rH1w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/7.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.AspNetCore.SignalR.Common/1.1.0": {
@@ -7718,6 +7772,11 @@
       "path": "../SecureGate.APIController.Framework/SecureGate.APIController.Framework.csproj",
       "msbuildProject": "../SecureGate.APIController.Framework/SecureGate.APIController.Framework.csproj"
     },
+    "SecureGate.Customer/1.0.0": {
+      "type": "project",
+      "path": "../SecureGate.Customer/SecureGate.Customer.csproj",
+      "msbuildProject": "../SecureGate.Customer/SecureGate.Customer.csproj"
+    },
     "SecureGate.DataAccess.Common/1.0.0": {
       "type": "project",
       "path": "../SecureGate.DataAccess.Common/SecureGate.DataAccess.Common.csproj",
@@ -7750,6 +7809,7 @@
       "Microsoft.AspNetCore.SignalR.Core >= 1.1.0",
       "Microsoft.Extensions.Configuration >= 6.0.1",
       "SecureGate.APIController.Framework >= 1.0.0",
+      "SecureGate.Customer >= 1.0.0",
       "SecureGate.DataAccess.Common >= 1.0.0",
       "SecureGate.Framework >= 1.0.0",
       "SecureGate.Maintenance >= 1.0.0",
@@ -7794,6 +7854,9 @@
           "projectReferences": {
             "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj": {
               "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj"
+            },
+            "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Customer\\SecureGate.Customer.csproj": {
+              "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Customer\\SecureGate.Customer.csproj"
             },
             "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.DataAccess.Common\\SecureGate.DataAccess.Common.csproj": {
               "projectPath": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.DataAccess.Common\\SecureGate.DataAccess.Common.csproj"

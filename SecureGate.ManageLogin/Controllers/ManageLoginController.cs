@@ -454,7 +454,7 @@ namespace SecureGate.ManageLogin.Controllers
                                     ValidateIssuerSigningKey = true,
                                     IssuerSigningKey = new SymmetricSecurityKey(key),
                                     ValidateIssuer = true,
-                                    ValidIssuer = "glassRUN",
+                                    ValidIssuer = "SecureGate",
                                     ValidateAudience = true,
                                     ValidAudience = "enduser",
                                     ValidateLifetime = true,
@@ -463,7 +463,7 @@ namespace SecureGate.ManageLogin.Controllers
                                 };
 
                                 var jwt = new JwtSecurityToken(
-                                       issuer: "glassRUN",
+                                       issuer: "SecureGate",
                                        audience: "enduser",
                                        claims: claims,
                                        notBefore: now,
@@ -768,9 +768,9 @@ namespace SecureGate.ManageLogin.Controllers
                     newJson.GetCustomerDetailsBySupplier = "";
                 }
 
-                string glassRUNApiUrl = ServiceConfigurationDataAccessManager.GetValueFormAppSettings("glassRUNApiUrl");
+                string SecureGateApiUrl = ServiceConfigurationDataAccessManager.GetValueFormAppSettings("SecureGateApiUrl");
 
-                string EnquiryDetailsApi = glassRUNApiUrl + "/ManageEnquiry/EnquiryList";
+                string EnquiryDetailsApi = SecureGateApiUrl + "/ManageEnquiry/EnquiryList";
 
 
 
@@ -785,9 +785,9 @@ namespace SecureGate.ManageLogin.Controllers
                 JArray jsonEnquiryDetailsResponse = (JArray)JsonConvert.DeserializeObject(EnquiryDetailsResponse);
                 newJson.GetEnquiryDetailsOfCustomerB2B = jsonEnquiryDetailsResponse;
 
-                string glassRUNOrederApiUrl = ServiceConfigurationDataAccessManager.GetValueFormAppSettings("glassRUNApiUrlOrder");
+                string SecureGateOrederApiUrl = ServiceConfigurationDataAccessManager.GetValueFormAppSettings("SecureGateApiUrlOrder");
 
-                string OrderDetailsApi = glassRUNOrederApiUrl + "/Order/OrderList";
+                string OrderDetailsApi = SecureGateOrederApiUrl + "/Order/OrderList";
 
 
 

@@ -16,11 +16,11 @@ namespace SecureGate.Framework.DataAccess
     
         public enum ConnectTo
         {
-            glassRUNDatabaseREADConnection,
-            glassRUNDatabaseWriteConnection,
+            SecureGateDatabaseREADConnection,
+            SecureGateDatabaseWriteConnection,
             CommonDB,
             Multitenancy,
-            glassRUNDocument
+            SecureGateDocument
         }
 
         public static SqlConnection Create(ConnectTo connectToDatabase)

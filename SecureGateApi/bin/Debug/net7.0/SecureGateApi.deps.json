@@ -12,6 +12,7 @@
           "Microsoft.AspNetCore.SignalR.Core": "1.1.0",
           "Microsoft.Extensions.Configuration": "6.0.1",
           "SecureGate.APIController.Framework": "1.0.0",
+          "SecureGate.Customer": "1.0.0",
           "SecureGate.DataAccess.Common": "1.0.0",
           "SecureGate.Framework": "1.0.0",
           "SecureGate.Maintenance": "1.0.0",
@@ -97,6 +98,17 @@
           "lib/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll": {
             "assemblyVersion": "5.0.15.0",
             "fileVersion": "5.0.1522.11616"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/7.0.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.14"
+        },
+        "runtime": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "7.0.1.0",
+            "fileVersion": "7.0.122.56809"
           }
         }
       },
@@ -1281,6 +1293,18 @@
           "SecureGate.APIController.Framework.dll": {}
         }
       },
+      "SecureGate.Customer/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "7.0.1",
+          "SecureGate.APIController.Framework": "1.0.0",
+          "SecureGate.DataAccess.Common": "1.0.0",
+          "SecureGate.Framework": "1.0.0",
+          "Swashbuckle.AspNetCore": "6.7.3"
+        },
+        "runtime": {
+          "SecureGate.Customer.dll": {}
+        }
+      },
       "SecureGate.DataAccess.Common/1.0.0": {
         "dependencies": {
           "SecureGate.Framework": "1.0.0"
@@ -1405,6 +1429,13 @@
       "sha512": "sha512-WOBU8TelYGfLdU3AR8BU3L3KTlMo1u4pdSBRPIhqhltgd0b6mIGR4RQisYFO7KzyOs19CvW2KNybvEuNblwyfg==",
       "path": "microsoft.aspnetcore.mvc.newtonsoftjson/5.0.15",
       "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.5.0.15.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.OpenApi/7.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rHaFl7SAHM59bwjcmcJMDyAfISkUDZi68iRSrzOZkGzAct72dqnG+w87+aycpayovZ3YLBZXL+6Oh6hAs5rH1w==",
+      "path": "microsoft.aspnetcore.openapi/7.0.1",
+      "hashPath": "microsoft.aspnetcore.openapi.7.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.SignalR.Common/1.1.0": {
       "type": "package",
@@ -2331,6 +2362,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "SecureGate.APIController.Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SecureGate.Customer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

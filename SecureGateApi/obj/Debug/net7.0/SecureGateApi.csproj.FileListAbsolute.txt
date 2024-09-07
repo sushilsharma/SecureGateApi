@@ -95,3 +95,9 @@ D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.exe
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.dll
 D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Maintenance.pdb
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Customer.deps.json
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Customer.runtimeconfig.json
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Customer.exe
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Customer.dll
+D:\RND\MyRep\SecureGate\SecureGateApi\SecureGateApi\bin\Debug\net7.0\SecureGate.Customer.pdb

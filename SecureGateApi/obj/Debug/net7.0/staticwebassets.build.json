@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XPUAAf96K4nvn3gZt2Bh6MOJE4tgC4JeLCMS01grI6M=",
+  "Hash": "R9b+qmFfSlOnWJBHb6HJMTEPMvilSgOa/jjDzHE+g+4=",
   "Source": "SecureGateApi",
   "BasePath": "_content/SecureGateApi",
   "Mode": "Default",
@@ -10,6 +10,17 @@
       "Identity": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.APIController.Framework\\SecureGate.APIController.Framework.csproj",
       "Version": 2,
       "Source": "SecureGate.APIController.Framework",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    },
+    {
+      "Identity": "D:\\RND\\MyRep\\SecureGate\\SecureGateApi\\SecureGate.Customer\\SecureGate.Customer.csproj",
+      "Version": 2,
+      "Source": "SecureGate.Customer",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
       "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",

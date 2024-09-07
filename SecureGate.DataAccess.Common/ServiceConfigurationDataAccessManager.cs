@@ -16,7 +16,7 @@ namespace SecureGate.DataAccess.Common
 		//Return all service configurations
 		public static string GetAllServiceConfigurationList()
 		{
-			using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+			using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
 			{
 				IDbCommand command = new System.Data.SqlClient.SqlCommand("SSP_AllServiceConfigurationList", connection);
 				command.CommandType = CommandType.StoredProcedure;
@@ -78,7 +78,7 @@ namespace SecureGate.DataAccess.Common
 
         public static T GetServicesConfiguartionFromSQL<T>(string servicesAction)
         {
-            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.glassRUNDatabaseREADConnection))
+            using (var connection = ConnectionManager.Create(ConnectionManager.ConnectTo.SecureGateDatabaseREADConnection))
             {
                 IDbCommand command = new SqlCommand("SSP_GetServiceConfigurationbyServiceActionV2", connection);
                 command.CommandType = CommandType.StoredProcedure;

@@ -22,7 +22,7 @@
         public const string Location = "Location";
         public const string Inventory = "Inventory";
         public const string Vehicle = "Vehicle";
-        public const string glassRUNFrameworkLogin = "glassRUNFrameworkLogin";
+        public const string SecureGateFrameworkLogin = "SecureGateFrameworkLogin";
         public const string Multitenancy = "Multitenancy";
         public const string PurchaseEnquiry = "PurchaseEnquiry";
         public const string PurchaseOrder = "PurchaseOrder";
@@ -49,7 +49,7 @@
         Vehicle,
         Location,
         Inventory,
-        glassRUNFrameworkLogin,
+        SecureGateFrameworkLogin,
         Multitenancy,
         PurchaseEnquiry,
         PurchaseOrder

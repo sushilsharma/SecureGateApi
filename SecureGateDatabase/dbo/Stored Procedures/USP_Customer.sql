@@ -1,6 +1,6 @@
 ﻿
 -- Create the stored procedure
-CREATE PROCEDURE USP_Customer
+CREATE PROCEDURE [dbo].[USP_Customer]
     @XMLData XML
 AS
 BEGIN
@@ -83,4 +83,5 @@ BEGIN
 
     -- Clean up the XML document handle
     EXEC sp_xml_removedocument @DocHandle;
+	SELECT @CustomerId as CustomerId,@CustomerMnemonic as CustomerMnemonic FOR XML RAW('Json'),ELEMENTS
 END;
